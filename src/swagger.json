@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.01",
   "info": {
-    "title": "RentalX Docs",
+    "title": "RentX Docs",
     "description": "This is a api Rent",
     "version": "1.0.0",
     "contact": {
@@ -14,7 +14,7 @@
         "tags": ["Categories"],
         "summary": "Create a category",
         "description": "Create a new category",
-        "requestBody":{
+        "requestBody": {
           "content": {
             "application/json": {
               "schema": {
@@ -36,7 +36,7 @@
           }
         },
         "responses": {
-          "201":{
+          "201": {
             "description": "Created"
           },
           "500": {
@@ -46,15 +46,15 @@
       },
       "get": {
         "tags": ["Categories"],
-        "summary":"List all categories",
+        "summary": "List all categories",
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
-                "schema":{
+                "schema": {
                   "type": "array",
-                  "items":{
+                  "items": {
                     "type": "object",
                     "properties": {
                       "name": {
@@ -69,6 +69,71 @@
               }
             }
           }
+        }
+      }
+    },
+    "/categories/import": {
+      "post": {
+        "tags": ["Categories"],
+        "summary": "Upload a new Category",
+        "description": "Upload a new Category",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/specifications": {
+      "post": {
+        "tags": ["Specifications"],
+        "summary": "Create a specification",
+        "description": "Create a new specification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Specification"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Specifications Already Exists"
+          }
+        }
+      }
+    }
+  },
+
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
         }
       }
     }
