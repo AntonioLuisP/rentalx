@@ -11,7 +11,6 @@
       "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
       "@shared/*": ["shared/*"],
-      "@errors/*": ["errors/*"],
       "@utils/*": ["utils/*"]
     },
     "resolveJsonModule": true,
