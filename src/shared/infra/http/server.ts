@@ -7,7 +7,7 @@ import { AppError } from "@shared/errors/AppError";
 
 import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
-import "../../../database";
+import "../typeorm";
 import "../../container";
 
 const app = express();
