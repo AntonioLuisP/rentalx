@@ -1,4 +1,3 @@
-import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { ICreateRentalDTO } from "@modules/rentals/dtos/ICreateRentalDTO";
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 
