@@ -1,5 +1,5 @@
 Arguments: 
-  D:\Gerenciadores de desenvolvimento\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add dayjs
+  D:\Gerenciadores de desenvolvimento\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add supertest @types/supertest -D
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;D:\Gerenciadores de desenvolvimento\Java\jdk-11.0.8\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\xampp\php;D:\Gerenciadores de desenvolvimento\nodejs\;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\anton\AppData\Local\Microsoft\WindowsApps;C:\Users\anton\AppData\Local\Programs\Microsoft VS Code\bin;D:\Gerenciadores de desenvolvimento\PyCharm Community Edition 2020.2.2\bin;;C:\Users\anton\AppData\Local\Yarn\bin;C:\Users\anton\AppData\Roaming\npm;C:\Users\anton\AppData\Roaming\Composer\vendor\bin
@@ -32,6 +32,7 @@ npm manifest:
       "@types/jsonwebtoken": "^8.5.8",
       "bcryptjs": "^2.4.3",
       "csv-parse": "^5.0.3",
+      "dayjs": "^1.11.6",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
@@ -1485,6 +1486,11 @@ Lockfile:
     version "5.0.3"
     resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-5.0.3.tgz#eeb0b1ac8bf2970f703176c8f54d313325b6d2e8"
     integrity sha512-86R0WU4aEEF/1fPZKxP3NmDAYC4Ce1t9iFgKPZogG5Lvk4m9WZQkCEsDANktG29jppejwclTtEOzubN2ieCJqw==
+  
+  dayjs@^1.11.6:
+    version "1.11.6"
+    resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.6.tgz#2e79a226314ec3ec904e3ee1dd5a4f5e5b1c7afb"
+    integrity sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==
   
   debug@2.6.9, debug@^2.6.9:
     version "2.6.9"
