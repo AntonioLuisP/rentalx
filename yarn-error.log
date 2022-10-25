@@ -1,5 +1,5 @@
 Arguments: 
-  D:\Gerenciadores de desenvolvimento\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add tsconfig-paths -D
+  D:\Gerenciadores de desenvolvimento\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add dayjs
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;D:\Gerenciadores de desenvolvimento\Java\jdk-11.0.8\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\xampp\php;D:\Gerenciadores de desenvolvimento\nodejs\;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\anton\AppData\Local\Microsoft\WindowsApps;C:\Users\anton\AppData\Local\Programs\Microsoft VS Code\bin;D:\Gerenciadores de desenvolvimento\PyCharm Community Edition 2020.2.2\bin;;C:\Users\anton\AppData\Local\Yarn\bin;C:\Users\anton\AppData\Roaming\npm;C:\Users\anton\AppData\Roaming\Composer\vendor\bin
@@ -23,9 +23,10 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "dev": "ts-node-dev -r tsconfig-paths/register --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "dev": "ts-node-dev -r tsconfig-paths/register --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
       "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-      "test": "jest"
+      "test": "jest",
+      "seed:admin": "ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
       "@types/jsonwebtoken": "^8.5.8",
