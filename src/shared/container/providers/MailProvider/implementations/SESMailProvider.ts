@@ -13,7 +13,7 @@ class SESMailProvider implements IMailProvider {
     this.client = nodemailer.createTransport({
       SES: new SES({
         apiVersion: "2010-12-01",
-        region: process.env.AWS_BUCKET_REGION,
+        region: process.env.AWS_REGION,
       }),
     });
   }
@@ -32,7 +32,7 @@ class SESMailProvider implements IMailProvider {
 
     await this.client.sendMail({
       to,
-      from: "Rentx <noreplay@rentx.com.br>",
+      from: "Rentx <antonioluis@lubbuck.com>",
       subject,
       html: templateHtml,
     });
