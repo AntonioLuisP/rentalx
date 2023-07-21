@@ -3,3 +3,6 @@ dist
 tmp/*
 .env
 coverage
+.vscode
+ormconfig.json
+!tmp/.gitkeep
