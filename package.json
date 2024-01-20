@@ -11,6 +11,8 @@
     "seed:admin": "ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
+    "@sentry/node": "^7.94.1",
+    "@sentry/tracing": "^7.94.1",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/nodemailer": "^6.4.7",
     "@types/redis": "^4.0.11",
