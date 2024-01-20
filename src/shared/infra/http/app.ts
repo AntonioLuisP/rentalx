@@ -12,9 +12,12 @@ import swaggerFile from "../../../swagger.json";
 import createConection from "../typeorm";
 import { router } from "./routes";
 import "../../container";
+import rateLimiter from "@shared/infra/http/middleware/rateLimiter"
 
 createConection();
 const app = express();
+
+app.use(rateLimiter)
 
 app.use(express.json());
 
